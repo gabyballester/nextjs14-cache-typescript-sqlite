@@ -21,13 +21,3 @@ export const GET = async (req: NextRequest) => {
     return handleError(error);
   }
 };
-
-// import { handleError } from "@/lib/utils";
-// import { Message } from "@/types";
-// import { NextRequest, NextResponse } from "next/server";
-
-// export async function GET(req: NextRequest): Promise<NextResponse<Message[]>> {
-//   try {
-//
-
-// }

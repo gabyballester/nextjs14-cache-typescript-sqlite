@@ -1,4 +1,6 @@
 import { addMessage } from "@/services";
+// import { revalidatePath } from "next/cache";
+import { revalidateTag } from "next/cache";
 import { redirect } from "next/navigation";
 
 export default function NewMessagePage() {
@@ -9,6 +11,8 @@ export default function NewMessagePage() {
 
     if (typeof message === "string" && message.length > 0) {
       addMessage(message);
+      // revalidatePath("/messages");
+      revalidateTag("msg");
       redirect("/messages");
     } else {
       console.error("Message is not valid");

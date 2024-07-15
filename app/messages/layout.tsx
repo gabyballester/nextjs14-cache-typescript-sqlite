@@ -1,19 +1,18 @@
 import { ReactNode } from "react";
-import { baseUrl } from "@/constants";
+// import { baseUrl } from "@/constants";
+import { Message } from "@/types";
+import { getMessages } from "@/services";
 
 export default async function MessagesLayout({
   children,
 }: {
   children: ReactNode;
 }) {
-  const response = await fetch(baseUrl + "/api/messages", {
-    headers: {
-      "X-ID": "layout",
-    },
-  });
+  // const response = await fetch(baseUrl + "/api/messages");
+  // const messages: Message[] = await response.json();
+  const messages: Message[] = await getMessages();
+  const totalMessages: number = messages.length;
 
-  const messages = await response.json();
-  const totalMessages = messages.length;
   return (
     <>
       <h1>Important Messages</h1>
