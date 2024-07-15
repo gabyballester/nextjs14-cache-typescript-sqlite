@@ -2,7 +2,7 @@
 
 ## 📝 Description
 
-Messages App is a Tech Assessment Project to demonstrate knowledge of Next.js.
+Messages App is a Tech Assessment Project to demonstrate knowledge of Next.js cache strategies.
 
 ## 🚀 Getting Started
 
@@ -41,27 +41,41 @@ The platform ensures high code quality and follows best practices.
 
 ## 🌟 Special Features
 
+**Caching in Next.js**
+
+1. **Request Memoization:**
+
+   - Function: Memoizes fetch responses with the same URL and options.
+   - Use: Prevents multiple network requests for the same data.
+
+2. **Data Cache**
+
+   - Function: Stores data on the server.
+   - Use: Reduces the need to fetch data on every request.
+
+3. **Full Route Cache**
+
+   - Function: Caches HTML and Server Components payload.
+   - Use: Improves performance by caching entire routes.
+
+4. **Router Cache**
+
+   - Function: Caches RSC payload on the client.
+   - Use: Reduces server requests during navigation.
+
 ## 📦 Prepare for production
 
-1. Install image optimization package sharp.
-
-```bash
-npm i sharp
-```
-
-2. Creating an optimized production build
+1. Creating an optimized production build
 
 ```bash
 npm run build
 ```
 
-3. Start the production build
+2. Start the production build
 
 ```bash
 npm run start
 ```
-
-## 🚀 Improvements
 
 ## 🤝 Contributions
 
